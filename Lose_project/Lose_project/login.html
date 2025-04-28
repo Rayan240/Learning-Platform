@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="login_Style.css" />
+    <script type="module" src="login.js" defer></script>
+    <script type="module" src="register.js"></script>
+
+    <title>Sign in & Sign up Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="#" class="sign-in-form">
+            <h2 class="title">Sign in</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="email" placeholder="E-mail" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" />
+            </div>
+            <input type="submit" value="Login" class="btn solid" />
+            <p class="social-text">Or Sign in with social platforms</p>
+            <div class="social-media">
+              <a href="https://www.facebook.com/login/" class="social-icon" target="_blank">
+                  <img src="IP_IMG/facebook.png" alt="Facebook" class="social-img">
+              </a>
+              <a href="https://github.com/login" class="social-icon">
+                  <img src="IP_IMG/github.png" alt="Github" class="social-img">
+              </a>
+              <a href="#" class="social-icon">
+                  <img src="IP_IMG/google-black-icon.webp" alt="Google" class="social-img">
+              </a>
+              <a href="https://www.linkedin.com/home" class="social-icon">
+                  <img src="IP_IMG/linkedin.png" alt="LinkedIn" class="social-img">
+              </a>
+          </div>
+          </form>
+          <form action="#" class="sign-up-form">
+            <h2 class="title">Sign up</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" />
+            </div>
+            <input type="submit" class="btn" value="Sign up" />
+            <p class="social-text">Or Sign up with social platforms</p>
+            <div class="social-media">
+              <a href="https://www.facebook.com/login/" class="social-icon" target="_blank">
+                  <img src="IP_IMG/facebook.png" alt="Facebook" class="social-img">
+              </a>
+              <a href="https://github.com/login" class="social-icon">
+                  <img src="IP_IMG/github.png" alt="Github" class="social-img">
+              </a>
+              <a href="#" class="social-icon">
+                  <img src="IP_IMG/google-black-icon.webp" alt="Google" class="social-img">
+              </a>
+              <a href="https://www.linkedin.com/home" class="social-icon">
+                  <img src="IP_IMG/linkedin.png" alt="LinkedIn" class="social-img">
+              </a>
+          </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>New here ?</h3>
+            <p>
+              Join us and be part of something great! Experience collaboration, innovation, and growth."
+
+              Let me know if you want a different style or message!             
+            </p>
+            <button class="btn transparent" id="sign-up-btn">
+              Sign up
+            </button>
+          </div>
+          <img src="img/log.svg" class="image" alt="" />
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>One of us ?</h3>
+            <p>
+              Join our community and unlock endless opportunities. Sign up today to connect, learn, and grow with us!
+            </p>
+            <button class="btn transparent" id="sign-in-btn">
+              Sign in
+            </button>
+          </div>
+          <img src="img/register.svg" class="image" alt="" />
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+
+    <script src="script_login.js"></script>
+  </body>
+</html>

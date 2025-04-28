@@ -1,0 +1,54 @@
+/* admin Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #003366, #66ccff);
+
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: #101010;
+    margin-top: 20px;
+}
+
+/* Form Container */
+input, textarea, button {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px auto;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Button Styling */
+button {
+    background-color: #08090a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(to right, #003366, #0575ac);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    input, textarea, button {
+        width: 90%;
+    }
+}
+
+
+

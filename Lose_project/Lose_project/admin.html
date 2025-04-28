@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Upload Course</title>
+    <link rel="stylesheet" href="admin.css">
+
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <h2> CodeHive Upload Course</h2>
+    <input type="text" id="courseTitle" placeholder="Course Title"><br>
+    <input type="text" id="coursePrice" placeholder="Course Price"><br>
+    <textarea id="courseDescription" placeholder="Course Description"></textarea><br>
+    <input type="text" id="instructorName" placeholder="Instructor Name"><br>
+    <input type="text" id="instructorJob" placeholder="Instructor Job"><br>
+    <input type="text" id="videoURL" placeholder="Video URL"><br>
+    <button onclick="uploadCourse()">Upload Course</button>
+
+    <script>
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCR7zwMD6FlGXiPIqnErr2IIV4pWHU8Djg",
+            authDomain: "codehive-login.firebaseapp.com",
+            projectId: "codehive-login",
+            storageBucket: "codehive-login.appspot.com",
+            messagingSenderId: "268589397490",
+            appId: "1:268589397490:web:bbc40468c86c3efcca276b"
+        };
+
+        // alert("Initializing Firebase...");
+        // const app = firebase.initializeApp(firebaseConfig);
+        // alert("Firebase Initialized!");
+
+        const db = firebase.firestore();
+        alert("Firestore Connected!");
+
+        async function uploadCourse() {
+            alert("Upload process started!");
+
+            // Get input values
+            const title = document.getElementById('courseTitle').value;
+            const price = document.getElementById('coursePrice').value;
+            const description = document.getElementById('courseDescription').value;
+            const instructorName = document.getElementById('instructorName').value;
+            const instructorJob = document.getElementById('instructorJob').value;
+            const videoURL = document.getElementById('videoURL').value;
+
+            // Validate input
+            if (!videoURL) {
+                alert("Please enter a video URL");
+                return;
+            }
+
+            try {
+                // Add data to Firestore
+                const docRef = await db.collection("new_courses_database").add({
+                    title,
+                    price,
+                    description,
+                    instructorName,
+                    instructorJob,
+                    videoURL
+                });
+
+                alert(`Course uploaded successfully! Document ID: ${docRef.id}`);
+                console.log("Course uploaded with ID:", docRef.id);
+            } catch (error) {
+                console.error("Error uploading course:", error);
+                alert(`Upload failed: ${error.message}`);
+            }
+        }
+    </script>
+</body>
+</html>
